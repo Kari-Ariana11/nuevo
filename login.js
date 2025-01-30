@@ -11,6 +11,6 @@ function validateForm(event) {
         alert("Por favor, ingresa tanto el correo electrónico como la contraseña.");
     } else {
         // Si ambos campos están completos, redirigir al usuario
-        window.location.href = "calculadora.html"; // Cambiar a la página que desees redirigir
+        window.location.href = "pag_lav.html"; // Cambiar a la página que desees redirigir
     }
 }
