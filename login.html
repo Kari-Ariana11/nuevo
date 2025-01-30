@@ -7,24 +7,25 @@
     <link href="css/login.css" rel="stylesheet">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form>
-            <img src="..." class="img-thumbnail" alt="...">
+    <div class="login-container" style="display: flex; align-items: center;">
+        <form style="flex: 1;">
+            <h2>Iniciar Sesión</h2>
             <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
+                <label for="email" class="form-label">Correo Electronico</label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3">
-                <label for="contraseña" class="form-label">Password</label>
+            </div>
+            <div class="mb-3">
+                <label for="contraseña" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="contraseña">
-              </div>
-              <div class="mb-3 form-check">
+            </div>
+            <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-                <button type="enviar" class="btn btn-primary">Ingresar</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button> 
+            
         </form>
+        <img src="https://oams.yvu.edu.in/assets/images/login.jpg" class="img-thumbnail" alt="Imagen de inicio de sesión" style="flex: 1; max-width: 40%; margin-left: 20px;">
     </div>
 </body>
 </html>
