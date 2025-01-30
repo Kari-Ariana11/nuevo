@@ -1,80 +1,139 @@
+/* Imagen de fondo que cubre toda la página */
 body {
-    background-color: #f4f6f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .login-container {
-    background-color: white;
-    padding: 3rem;
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra más pronunciada */
-    width: 100%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .login-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-    font-family: 'Roboto', sans-serif; /* Fuente más moderna */
-    font-weight: 600;
-  }
-  
-  .form-label {
-    font-weight: 500;
-    font-size: 16px;
-  }
-  
-  .form-control {
-    border-radius: 8px;
-    padding: 12px;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    font-size: 16px;
-  }
-  
-  .mb-3 {
-    margin-bottom: 1.5rem; /* Aumento del espacio entre los elementos */
-  }
-  
-  .btn-custom {
-    width: 100%;
-    padding: 14px;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-custom:hover {
-    background-color: #0056b3;
-    transform: scale(1.05); /* Efecto de agrandar el botón */
-  }
-  
-  .btn-custom:active {
-    transform: scale(0.98); /* Efecto al hacer clic en el botón */
-  }
-  
-  .form-check-label {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .img-thumbnail {
-    flex: 1;
-    max-width: 100%; /* Aumentamos el tamaño de la imagen */
-    margin-left: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra para la imagen */
-  }
-  
+  background-image: url('https://jdagsfd.weebly.com/uploads/1/3/4/4/134490449/329510091.jpg');  /* Cambia esta URL por la de tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo del contenedor del formulario */
+.login-container {
+  background: rgba(255, 255, 255, 0.267);  /* Fondo blanco semi-transparente */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;  /* Tamaño máximo */
+}
+
+/* Estilo de las etiquetas */
+.form-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  display: block; /* Asegura que la etiqueta esté en línea separada */
+  margin-bottom: 7px; /* Espacio debajo de la etiqueta */
+}
+
+/* Estilo de los campos de entrada (input) para solo mostrar una línea */
+.form-control {
+  border: none;                /* Elimina el borde */
+  border-bottom: 2px solid #ccc; /* Solo agrega una línea en la parte inferior */
+  outline: none;               /* Elimina el borde azul de enfoque */
+  background: transparent;     /* Fondo transparente */
+  margin-bottom: 10px;         /* Espacio inferior */
+  padding: 10px;               /* Espaciado interno */
+  font-size: 16px;             /* Tamaño de la fuente */
+  width: 80%;                 /* Asegura que ocupe el 100% del contenedor */
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #007bff; /* Cambia la línea inferior a azul cuando el campo esté en foco */
+}
+
+/* Estilo de los botones */
+.btn {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Estilo para el botón de inicio de sesión */
+.btn-primary {
+  background-color: #5C6BC0;  /* Un color suave pero con vida (lavanda) */
+  color: white;               /* Texto blanco para contraste */
+  font-size: 16px;
+  padding: 12px 30px;         /* Tamaño cómodo y espacioso */
+  border: none;               /* Sin borde para mayor suavidad */
+  border-radius: 30px;        /* Bordes completamente redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  cursor: pointer;           /* Indica que el botón es clickeable */
+}
+
+.btn-primary:hover {
+  background-color: #4E5B96;  /* Un tono más oscuro para el hover */
+  transform: translateY(-5px); /* Efecto de desplazamiento hacia arriba */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el botón */
+}
+
+.btn-primary:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 10px rgba(92, 107, 192, 0.6); /* Sombra sutil al enfocar */
+}
+
+/* Estilo adicional para otros elementos */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el checkbox "Recuerdame" */
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555; /* Borde gris para que se vea suave */
+  border-radius: 50%; /* Hacemos el checkbox redondo */
+  appearance: none; /* Elimina el estilo por defecto */
+  background-color: white; /* Fondo blanco */
+  position: relative; /* Para poder posicionar el icono de "check" */
+  transition: all 0.3s ease; /* Transición suave */
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #5C6BC0; /* Color de fondo cuando está marcado (lavanda) */
+  border-color: #5C6BC0; /* Asegura que el borde coincida */
+}
+
+.form-check-input:checked::before {
+  content: '\2713'; /* Símbolo de checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+}
+
+.form-check-input:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Sombra suave al pasar el ratón */
+  transform: scale(1.1); /* Efecto de agrandamiento suave */
+}
+
+.form-check-label {
+  font-family: 'Arial', sans-serif; /* Cambié la fuente a Arial para algo más moderno */
+  font-size: 16px; /* Hice el texto un poco más grande */
+  font-weight: normal; /* Normal por defecto */
+  color: #333; /* Color de letra más oscuro para que resalte */
+  margin-left: 10px; /* Espacio entre el checkbox y el texto */
+  cursor: pointer; /* Indica que el texto es clickeable */
+  transition: font-weight 0.3s ease, color 0.3s ease; /* Transición suave para el cambio */
+}
+
+.form-check-input:checked + .form-check-label {
+  font-weight: bold; /* Cuando se selecciona, el texto se pone en negrita */
+  color: #000107; /* Cambié el color de la letra a lavanda cuando está seleccionado */
+}
+
+.form-check-label {
+  font-size: 14px;
+  color: #553;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
